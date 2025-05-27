@@ -1,0 +1,27 @@
+{
+  "name": "chrome-extension-chatbot",
+  "version": "1.0.0",
+  "description": "A ai powered chat bot for browser extensions",
+  "homepage": "https://github.com/micheal-ndoh/Chrome-Extension-Chatbot#readme",
+  "bugs": {
+    "url": "https://github.com/micheal-ndoh/Chrome-Extension-Chatbot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micheal-ndoh/Chrome-Extension-Chatbot.git"
+  },
+  "license": "MIT",
+  "author": "Micheal Ndoh",
+  "type": "commonjs",
+  "main": "popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.1.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3"
+  }
+}
