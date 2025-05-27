@@ -14,7 +14,7 @@ input.addEventListener('keypress', async (e) => {
     }
 
     const requestPayload = {
-      model: 'allam-2-7b',
+      model: 'deepseek-r1-distill-llama-70b',
       messages: [
         { role: 'system', content: 'You are a helpful assistant.' },
         { role: 'user', content: userText },
