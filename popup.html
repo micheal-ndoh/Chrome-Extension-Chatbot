@@ -14,59 +14,65 @@
     <header
       class="p-3 bg-blue-600 text-white flex justify-between items-center"
     >
-      <h1 class="font-bold">AI Chat</h1>
-      <button id="openSettings" class="text-sm underline">Settings</button>
+      <span>AI Chatbot</span>
+      <div>
+        <button
+          id="openSettings"
+          class="text-xs px-2 py-1 rounded bg-gray-700 hover:bg-gray-800"
+        >
+          Settings
+        </button>
+        <button
+          id="clearChatsBtn"
+          class="text-xs px-2 py-1 rounded bg-red-500 hover:bg-red-600"
+        >
+          Clear Chats
+        </button>
+      </div>
     </header>
 
     <!-- Chat Panel -->
     <div id="chatPanel" class="flex flex-col h-[calc(100%-56px)]">
-      <!-- 56px = header height -->
-      <main class="flex-1 overflow-y-auto p-3 space-y-2">
-        <div id="chat"></div>
-      </main>
-      <footer class="p-2 border-t border-gray-200 dark:border-gray-700">
-        <input
-          id="userInput"
-          class="w-full rounded-xl px-3 py-2 border dark:bg-gray-800 dark:text-white dark:border-gray-600"
-          placeholder="Ask something..."
-        />
-      </footer>
+      <div id="chat" class="flex-1 p-2 overflow-y-auto"></div>
+      <input
+        id="userInput"
+        class="w-full border p-2 rounded text-sm mt-2"
+        placeholder="Type a message and press Enter"
+      />
+      <button
+        id="summarizeBtn"
+        class="mt-2 w-full px-3 py-2 rounded bg-blue-600 text-white text-sm"
+      >
+        Summarize This Page
+      </button>
     </div>
 
     <!-- Settings Panel -->
-    <div
-      id="settingsPanel"
-      class="hidden flex flex-col h-[calc(100%-56px)] p-4 gap-4"
-    >
-      <div>
-        <label for="apiKey" class="block mb-1">API Key</label>
-        <input
-          id="apiKey"
-          class="w-full p-2 border rounded-lg dark:bg-gray-800 dark:text-white dark:border-gray-600"
-          placeholder="sk-..."
-        />
-      </div>
-
-      <div>
-        <label for="apiUrl" class="block mb-1">API Endpoint</label>
+    <div id="settingsPanel" class="hidden flex flex-col h-full p-4">
+      <label class="mb-2"
+        >API Key:
+        <input id="apiKey" class="w-full border p-1 rounded text-xs" />
+      </label>
+      <label class="mb-2"
+        >API URL:
         <input
           id="apiUrl"
-          class="w-full p-2 border rounded-lg dark:bg-gray-800 dark:text-white dark:border-gray-600"
-          value="https://api.openai.com/v1/chat/completions"
+          class="w-full border p-1 rounded text-xs"
+          value="https://api.openai.com/v1"
         />
-      </div>
-
-      <div class="mt-auto flex justify-between">
-        <button
-          id="backToChat"
-          class="px-4 py-2 rounded bg-gray-300 dark:bg-gray-700 dark:text-white"
-        >
-          Back
-        </button>
-        <button id="saveBtn" class="px-4 py-2 rounded bg-blue-600 text-white">
-          Save
-        </button>
-      </div>
+      </label>
+      <button
+        id="saveBtn"
+        class="mb-2 px-3 py-2 rounded bg-green-600 text-white text-sm"
+      >
+        Save
+      </button>
+      <button
+        id="backToChat"
+        class="px-3 py-2 rounded bg-gray-600 text-white text-sm"
+      >
+        Back
+      </button>
     </div>
 
     <!-- JS Logic to toggle panels -->
