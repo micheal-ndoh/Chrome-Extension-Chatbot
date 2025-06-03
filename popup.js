@@ -14,7 +14,7 @@ input.addEventListener('keypress', async (e) => {
     }
 
     const requestPayload = {
-      model: 'llama3-70b-8192',
+      model: 'llama-3.1-8b-instant',
       messages: [
         { role: 'system', content: 'You are a helpful assistant.' },
         { role: 'user', content: userText },
